@@ -1,0 +1,25 @@
+apt install samba
+
+Ajouter un user dans SMB:
+- smbpassword -a user <password>
+
+Supprimer un user:
+- smbpassword -x user
+
+serice smbd reload
+
+nano /etc/samba/smb.conf
+ex: [PHOTO]
+path=/document/photos     # Chemin de fichier 
+guest ok= yes             # Invité autorisé
+create mask= 755          # Autorisation des ficheirs
+directory maks= 755       # Autorisation des dossiers
+valid users= user1, user2, groupe1
+
+
+writeable= yes            # Ecriture autorisé
+read only= yes            # Lecture seul
+Petite astuce:
+read only=yes
+write list= user1, user2,...
+
