@@ -13,7 +13,7 @@ ex: [PHOTO]
 path=/document/photos     # Chemin de fichier 
 guest ok= yes             # Invité autorisé
 create mask= 755          # Autorisation des ficheirs
-directory maks= 755       # Autorisation des dossiers
+directory mask= 755       # Autorisation des dossiers
 valid users= user1, user2, groupe1
 
 
