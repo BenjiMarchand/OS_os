@@ -1,0 +1,25 @@
+apt install vsftpd
+
+#Ajouter un home directory a ftp
+usermod -d /home/toto ftp
+
+# Modifier le fichier de config
+nano /etc/vsftpd.conf 
+
+anon_root=[path]                # Anonyme directory
+anonymous_enable=yes/non        # Autoriser le suser Aninyme
+anon_upload=yes/non             # Autoriser les téléchargements sur le serveurs
+write_enable=yes/no             # Autoriser l'écritiure
+anon_mkdir_write_enable=yes/no  # Autoriser la création de dossier par des anonymes
+local_umask=022                 # ......
+chroot_local_user=yes/no        # restreindre l'utilisateur dans son répertoire
+allow_writeable_chroot=yes/no   # Si erreur de chroot
+
+
+# Exemple: Adrien peut avoir acès au serveur mais pas un autre user
+nano /etc/vsftpd.conf
+  chroot_local_user=no
+  chroot_list_enable=yes
+  chroot_list_file=[path]
+nano [path]
+  Adrien
