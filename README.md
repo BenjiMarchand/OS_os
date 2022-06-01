@@ -1,4 +1,7 @@
 # Full Sheat Sheat
+## Use 
+apt install popper-utils 
+pdftotexte pdf-name.pdf - | more
 
 ## Montage
 ### Monter une partition : #mount (partition/disque) (répertoire_de_destination)
