@@ -93,7 +93,8 @@ o Gateway X.X.X.X
 ### Afficher les interfaces → ip addr
 ### Restart le service → service networking restart
 ### Ifup/down pour shut/start l’inter
-8. SSH
+
+  ## SSH
 - Télécharger le paquet serveur : #apt-get install ssh
 - Télécharger le paquet client : #apt-get install openssh-client
 - Génerer une paire de clé ssh : #ssh-keygen -t rsa
@@ -106,3 +107,7 @@ o Allez dans le fichier « /etc/.ssh/authorized_keys
 - Fichier de configuration : /etc/ssh/sshd_config
 o PermitRootLogin no → empêche root de se connecter en ssh
 o AllowUsers → permet d’autoriser des utilisateurs à se connecter en ssh
+o PasswordAuthentication no → bloque l’identification par mdp
+o UsePam no → Empeche d’utiliser PAM → à faire après avoir fait l’échange declé
+  
+## 
